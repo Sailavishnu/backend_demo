@@ -1,0 +1,23 @@
+BOOKNEST — DATABASE SCHEMA
+================================
+
+Purpose: A simple catalogue for the books readers return to.
+Database name: website1_db (set DB_NAME in backend/.env)
+Database: MongoDB
+Collection: books
+Fields:
+  - title: text (required) — Book title
+  - author: text (required) — Author
+  - genre: text (required) — Genre
+  - copies: number (required) — Copies
+Automatic fields: _id (ObjectId), createdAt, updatedAt
+
+CRUD API:
+  GET    /api/books       Read all records
+  POST   /api/books       Create a record
+  PUT    /api/books/<id>  Update a record
+  DELETE /api/books/<id> Delete a record
+
+This website intentionally manages one collection on one page.
+MongoDB creates the collection when the first record is inserted.
+Sample records in the design notes are illustrative only; no data is preloaded.
